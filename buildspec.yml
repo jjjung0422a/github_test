@@ -9,7 +9,8 @@ phases:   # 빌드 단계
       - echo Pre-Build completed on `date`
   build:
     commands:
-      - gradle build -x test
+      - chmod +x ./gradlew
+      - ./gradlew build
   post_build:
     commands:
       - echo $(basename ./build/libs/*.jar)
